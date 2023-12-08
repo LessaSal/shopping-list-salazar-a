@@ -24,7 +24,7 @@ function onAddItemSubmit(e) {
     return;
   }
 
-  // Check for edit mode
+  // check for edit mode
   if (isEditMode) {
     const itemToEdit = itemList.querySelector(".edit-mode");
 
@@ -42,7 +42,7 @@ function onAddItemSubmit(e) {
   // create item DOM element
   addItemToDOM(newItem);
 
-  // Add item to local storage
+  // add item to local storage
   addItemToStorage(newItem);
 
   checkUI();
@@ -118,7 +118,7 @@ function setItemToEdit(item) {
 
   item.classList.add("edit-mode");
   formBtn.innerHTML = '<i class="fa-solid fa-pen"></i>Update Item';
-  formBtn.style.backgroundColor = "#228b22";
+  formBtn.style.backgroundColor = "#228B22";
   itemInput.value = item.textContent;
 }
 
@@ -159,7 +159,7 @@ function filterItems(e) {
   const items = itemList.querySelectorAll("li");
   const text = e.target.value.toLowerCase();
 
-  items.forEach(item => {
+  items.forEach((item) => {
     const itemName = item.firstChild.textContent.toLowerCase();
 
     if (itemName.indexOf(text) != -1) {
